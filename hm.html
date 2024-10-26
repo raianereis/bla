@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pregunta</title>
+    <style>
+        html {
+            background: rgb(255, 255, 255);
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-family: Arial;
+        }
+
+        .rectangulo {
+            text-align: center;
+        }
+
+        h2 {
+            color: rgb(5, 5, 5);
+            margin-top: 5%;
+            font-size: 30px;
+            padding: 5px 10px;
+            font-family: Arial;
+        }
+
+        .boton1 {
+            height: 40px;
+            width: 40px;
+            background: rgba(4, 218, 83, 0.885);
+            border: 1px solid rgb(255, 255, 255);
+            margin: 0%;
+            margin-top: 8%;
+            font-size: medium;
+            border-radius: 10px;
+            animation: pulse 1.5s infinite;
+        }
+
+        .boton2 {
+            background: rgb(248, 51, 51);
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgb(255, 255, 255);
+            margin-top: 8%;
+            font-size: medium;
+            border-radius: 10px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(.99);
+                box-shadow: 0 0 0 0 rgb(212, 211, 212);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 3px rgb(205, 204, 204);
+            }
+
+            100% {
+                transform: scale(.99);
+                box-shadow: 0 0 0 0 rgb(170, 168, 168);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <article class="rectangulo">
+        <h2><p>Alessandro...</p>Você quer ser meu namorado?</h2>
+        <input type="button" id='yes' class="boton1" value="Sì" />
+        <input class="boton2" type="button" id="not" onmousemove="evitar()" value="No" />
+    </article>
+
+    <script>
+        const botonsi = document.getElementById('yes');
+
+        function respuestasi() {
+            alert('Sei una pussy, ma ti amo ♥');
+            location.href = ""
+        }
+
+        function evitar() {
+            width = 300
+            height = 400
+
+            newWidth = (Math.random() * width);
+            newHeight = (Math.random() * height);
+
+            document.getElementById('not').style.position = 'absolute';
+            document.getElementById('not').style.top = newHeight + 'px';
+            document.getElementById('not').style.left = newWidth + 'px';
+        }
+
+        botonsi.addEventListener('click', respuestasi);
+    </script>
+</body>
+
+</html>
